@@ -59,10 +59,10 @@ function Sidebar({ menuActive }) {
           </Link>
         </li>
         <li>
-          <Link to="/signout" className={isActiveLink('/signout')}>
+          <a href='#' className={isActiveLink('/signout')}>
             <span className="icon"><FaSignOutAlt /></span>
             <span className="title">Sign Out</span>
-          </Link>
+          </a>
         </li>
       </ul>
     </div>

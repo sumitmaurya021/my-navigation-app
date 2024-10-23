@@ -85,6 +85,8 @@ function Help() {
         transition={{ duration: 0.5, delay: 0.2 }} // Delay for section animation
       >
         <h2 className="faq-heading">Frequently Asked Questions</h2>
+        <br/>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly', alignItems: 'center' }}>
         {faqData.map((faq, index) => (
           <motion.div 
             className="faq-item" 
@@ -100,6 +102,7 @@ function Help() {
             <h3 className="faq-question">{faq.title}</h3> {/* FAQ title */}
           </motion.div>
         ))}
+        </div>
       </motion.div>
 
       {/* Modal for displaying FAQ details */}
@@ -119,7 +122,7 @@ function Help() {
               initial={{ y: "-100vh", opacity: 0 }} // Initial position and opacity
               animate={{ y: 0, opacity: 1 }} // Animate to visible position
               exit={{ y: "100vh", opacity: 0 }} // Exit position and opacity
-              transition={{ type: "spring", stiffness: 100, damping: 20 }} // Spring animation for modal
+              transition={{ type: "spring", stiffness: 300, spring: 1 }} // Spring animation for modal
             >
               <span className="close-button" onClick={closeModal}>&times;</span> {/* Close button */}
               <h2 className="modal-title">{modalData.title}</h2> {/* Modal title */}
