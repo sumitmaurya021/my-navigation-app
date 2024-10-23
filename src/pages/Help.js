@@ -122,7 +122,7 @@ function Help() {
               initial={{ y: "-100vh", opacity: 0 }} // Initial position and opacity
               animate={{ y: 0, opacity: 1 }} // Animate to visible position
               exit={{ y: "100vh", opacity: 0 }} // Exit position and opacity
-              transition={{ type: "spring", stiffness: 300, spring: 1 }} // Spring animation for modal
+              transition={{ type: "spring", stiffness: 100, spring: 1 }} // Spring animation for modal
             >
               <span className="close-button" onClick={closeModal}>&times;</span> {/* Close button */}
               <h2 className="modal-title">{modalData.title}</h2> {/* Modal title */}
